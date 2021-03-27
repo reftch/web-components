@@ -1,0 +1,68 @@
+@use '../colors';
+
+.w-search {
+  width: 200px;
+  
+  input {
+    border-radius: 4px;
+    color: $primary-color;
+    border: 1px solid $primary-color-disabled;
+    outline: none;
+    height: 30px;
+    padding: 0px 30px;
+    width: 100%;
+  }
+
+  input:focus {
+    border: 1px solid $active;
+  }
+
+  &-label {
+    padding-bottom: 5px;
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-style: italic;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-style: italic;
+  }
+
+  input:hover {
+    color: $primary-color-hover;
+  }
+
+  input:hover:disabled {
+    color: $primary-color;
+  }
+
+  &-disabled {
+    color: $primary-color-disabled;
+  }
+
+  &-icon {
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 16px;          
+    background-size: cover;
+    margin-right: 0px;
+    background-color: $primary-color;  
+  }
+
+  .icon-search {
+    top: -22px;
+    left: 10px;
+  }
+
+  .icon-close {
+    width: 12px;
+    height: 12px;          
+    top: -24px;
+    // left: 160px;
+    cursor: pointer;
+  }
+
+
+}
+

@@ -1,0 +1,61 @@
+@use '../colors';
+
+.w-checkbox {
+  // font-size: 15px;
+
+  &-toggle {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: $primary-color-elements;
+  }
+
+  // After slide changes 
+  &-toggle:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    background-color: $primary-color-background;
+    border: 2px solid gray;
+    transition: all 0.2s;
+  }
+
+  &-label {
+    position: relative;
+    left: 5px;
+    top: -2px;
+  }
+
+  &-label-disabled {
+    color: $primary-color-disabled;
+  }
+
+  // Checkbox cheked effect 
+  .w-checkbox:checked+.w-checkbox-toggle::after {
+    box-shadow: inset 0px 0px 0px 2px #fff;
+    background-color: $primary-color-strong;
+    border-radius: 3px;
+  }
+
+  // Disabled
+  &-toggle-disabled {
+    cursor: default;
+  }
+
+  &-toggle-disabled:after {
+    border: 2px solid $primary-color-elements;
+  }
+
+  .w-checkbox:checked+.w-checkbox-toggle-disabled::after {
+    background-color: $primary-color-disabled;
+  }
+
+  // Checkbox vanished 
+  .w-checkbox {
+    display: none;
+  }
+}
